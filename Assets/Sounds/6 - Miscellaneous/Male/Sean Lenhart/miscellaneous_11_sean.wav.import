@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ikntufarcmlc"
+path="res://.godot/imported/miscellaneous_11_sean.wav-d72dc2d130da32b2d091804ccb55cf28.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/6 - Miscellaneous/Male/Sean Lenhart/miscellaneous_11_sean.wav"
+dest_files=["res://.godot/imported/miscellaneous_11_sean.wav-d72dc2d130da32b2d091804ccb55cf28.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

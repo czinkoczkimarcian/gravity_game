@@ -1,0 +1,207 @@
+[gd_scene format=4 uid="uid://cycguvh40g84a"]
+
+[ext_resource type="Script" uid="uid://winhv4jgb6ru" path="res://Scripts/level_1.gd" id="1_8ffim"]
+[ext_resource type="PackedScene" uid="uid://3rxanvkj0f3l" path="res://Scenes/asteroids.tscn" id="2_8ffim"]
+[ext_resource type="Texture2D" uid="uid://dphy7xwme3mfi" path="res://Assets/space_bg/space_green_nebula_1024.png" id="3_7p6j4"]
+[ext_resource type="Texture2D" uid="uid://c1ommgu13sbvt" path="res://Assets/Industrial Tileset - Free Pack 32p/1_Industrial_Tileset_1.png" id="3_xfk5q"]
+[ext_resource type="PackedScene" uid="uid://bs5g4h87johtf" path="res://Scenes/planet.tscn" id="5_6444e"]
+[ext_resource type="PackedScene" uid="uid://ccnd6ix338uot" path="res://Scenes/goal.tscn" id="6_evi0p"]
+[ext_resource type="AudioStream" uid="uid://c7wl24a1xly61" path="res://Assets/Sounds/Week 21 - Freefall WHAT A VIEW.ogg" id="7_wrinw"]
+[ext_resource type="AudioStream" uid="uid://be321ufmwbbx" path="res://Assets/Sounds/crash.mp3" id="8_chwpn"]
+[ext_resource type="AudioStream" uid="uid://54ueb6dp05mf" path="res://Assets/Sounds/win.mp3" id="9_af3po"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrinw"]
+texture = ExtResource("3_xfk5q")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7numd"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wrinw")
+
+[node name="Level1" type="Node2D" unique_id=245697842]
+script = ExtResource("1_8ffim")
+next_level = "uid://cteu2ogqu4i8v"
+
+[node name="BG" type="Sprite2D" parent="." unique_id=833974054]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_7p6j4")
+
+[node name="Border" type="TileMapLayer" parent="." unique_id=33478498]
+tile_map_data = PackedByteArray("AAD7//b/AAABAAEAAAD8//b/AAABAAEAAAD9//b/AAABAAEAAAD+//b/AAABAAEAAAD///b/AAABAAEAAAAAAPb/AAABAAEAAAABAPb/AAABAAEAAAACAPb/AAABAAEAAAADAPb/AAABAAEAAAAEAPb/AAABAAEAAAD6//b/AAAAAAEAAAD6/wkAAAAAAAMAAAD7/wkAAAABAAMAAAD8/wkAAAABAAMAAAD9/wkAAAABAAMAAAD+/wkAAAABAAMAAAD//wkAAAABAAMAAAAAAAkAAAABAAMAAAABAAkAAAABAAMAAAACAAkAAAABAAMAAAADAAkAAAABAAMAAAAEAAkAAAABAAMAAAAEAAAAAAABAAEAAAADAAAAAAABAAEAAAACAAAAAAABAAEAAAABAAAAAAABAAEAAAAFAPb/AAABAAEAAAAFAAkAAAABAAMAAAAGAAkAAAACAAMAAAAGAPb/AAACAAEAAAAGAAgAAAACAAIAAAAGAAcAAAACAAIAAAAGAAYAAAACAAIAAAAGAAUAAAACAAIAAAAGAAQAAAACAAIAAAAGAAMAAAACAAIAAAAGAAIAAAACAAIAAAAGAAEAAAACAAIAAAAGAAAAAAACAAIAAAAGAP//AAACAAIAAAAGAP7/AAACAAIAAAAGAP3/AAACAAIAAAAGAPz/AAACAAIAAAAGAPv/AAACAAIAAAAGAPr/AAACAAIAAAAGAPn/AAACAAIAAAAGAPj/AAACAAIAAAAGAPf/AAACAAIAAAD5//b/AAAAAAEAAAD5//f/AAAAAAIAAAD5//j/AAAAAAIAAAD5//n/AAAAAAIAAAD5//r/AAAAAAIAAAD5//v/AAAAAAIAAAD5//z/AAAAAAIAAAD5//3/AAAAAAIAAAD5//7/AAAAAAIAAAD5////AAAAAAIAAAD5/wAAAAAAAAIAAAD5/wEAAAAAAAIAAAD5/wIAAAAAAAIAAAD5/wMAAAAAAAIAAAD5/wQAAAAAAAIAAAD5/wUAAAAAAAIAAAD5/wYAAAAAAAIAAAD5/wcAAAAAAAIAAAD5/wgAAAAAAAIAAAD5/wkAAAAAAAMAAAAFAAAAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_7numd")
+
+[node name="Asteroids" parent="." unique_id=558508498 instance=ExtResource("2_8ffim")]
+z_index = 3
+position = Vector2(119, 164)
+wall_min_slide_angle = 0.0
+max_trail_points = 10
+
+[node name="AimLine" type="Line2D" parent="." unique_id=891614981]
+
+[node name="Planet" parent="." unique_id=37863370 instance=ExtResource("5_6444e")]
+position = Vector2(4, 16)
+gravity_radius = 100.0
+gravity_strength = 30.0
+
+[node name="Goal" parent="." unique_id=1776181934 instance=ExtResource("6_evi0p")]
+position = Vector2(91, -160)
+goal_radius = 64.0
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1272558134]
+
+[node name="LevelCompleteLabel" type="Label" parent="HUD" unique_id=1444686506]
+anchors_preset = -1
+anchor_left = 0.48600003
+anchor_top = 0.776
+anchor_right = 0.526
+anchor_bottom = 0.776
+offset_left = -17.87201
+offset_top = -50.848022
+offset_right = 11.2960205
+offset_bottom = 56.151978
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2087879180]
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Audio" type="Node" parent="." unique_id=234793485]
+
+[node name="Music" type="AudioStreamPlayer" parent="Audio" unique_id=125546951]
+stream = ExtResource("7_wrinw")
+autoplay = true
+bus = &"Music"
+
+[node name="Death" type="AudioStreamPlayer" parent="Audio" unique_id=455558212]
+stream = ExtResource("8_chwpn")
+bus = &"SFX"
+
+[node name="Complete" type="AudioStreamPlayer" parent="Audio" unique_id=1548420976]
+stream = ExtResource("9_af3po")
+bus = &"SFX"

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcccxntd7j4ih"
+path="res://.godot/imported/damage_10_meghan.wav-50104b156808d631beb27e24ed694003.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/7 - Damage/Female/Meghan Christian/damage_10_meghan.wav"
+dest_files=["res://.godot/imported/damage_10_meghan.wav-50104b156808d631beb27e24ed694003.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

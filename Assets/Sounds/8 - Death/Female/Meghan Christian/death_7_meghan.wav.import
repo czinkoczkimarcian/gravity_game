@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgikju07ld5c4"
+path="res://.godot/imported/death_7_meghan.wav-2cdd3cf996e07b695ef3ce4df712d1d4.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/8 - Death/Female/Meghan Christian/death_7_meghan.wav"
+dest_files=["res://.godot/imported/death_7_meghan.wav-2cdd3cf996e07b695ef3ce4df712d1d4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

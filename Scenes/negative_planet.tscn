@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cls5avlv5rn0l"]
+
+[ext_resource type="Script" uid="uid://wajllgatxp76" path="res://Scripts/negative_planet.gd" id="1_373e0"]
+[ext_resource type="Texture2D" uid="uid://dxxaav5omkrj3" path="res://Assets/negative_planet.png" id="1_dl10v"]
+
+[node name="NegativePlanet" type="StaticBody2D" unique_id=1598434011]
+script = ExtResource("1_373e0")
+field_radius = 100.0
+push_strength = 650.0
+field_color = Color(0.99310154, 0.44694787, 0, 0.4509804)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=57676719]
+debug_color = Color(0.86071885, 0.3621074, 0, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=488967659]
+texture = ExtResource("1_dl10v")

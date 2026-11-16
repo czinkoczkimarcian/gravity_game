@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7wl24a1xly61"
+path="res://.godot/imported/Week 21 - Freefall WHAT A VIEW.ogg-98b0e9c6ea02d7ebb4b2b8d128705e8e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/Week 21 - Freefall WHAT A VIEW.ogg"
+dest_files=["res://.godot/imported/Week 21 - Freefall WHAT A VIEW.ogg-98b0e9c6ea02d7ebb4b2b8d128705e8e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

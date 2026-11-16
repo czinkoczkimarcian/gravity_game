@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d26gw73e2re0i"]
+
+[node name="Launcher" type="Node2D" unique_id=1160202781]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1155857020]
+
+[node name="AimPivot" type="Node2D" parent="." unique_id=1392319832]
+
+[node name="Barrel" type="Sprite2D" parent="AimPivot" unique_id=850888496]
+
+[node name="Muzzle" type="Marker2D" parent="AimPivot" unique_id=329415921]
+
+[node name="AimLine" type="Line2D" parent="." unique_id=1564422720]

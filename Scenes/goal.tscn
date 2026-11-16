@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ccnd6ix338uot"]
+
+[ext_resource type="Script" uid="uid://rbprbn84x02i" path="res://Scripts/goal.gd" id="1_s0pnd"]
+[ext_resource type="Texture2D" uid="uid://dmt1k51bcyccb" path="res://Assets/CelestialObjects.png" id="2_2lgk0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
+atlas = ExtResource("2_2lgk0")
+region = Rect2(256, 0, 128, 95)
+
+[node name="Goal" type="Area2D" unique_id=1776181934]
+script = ExtResource("1_s0pnd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1831064778]
+texture = SubResource("AtlasTexture_g4v7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045002573]

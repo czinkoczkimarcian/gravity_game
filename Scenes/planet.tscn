@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bs5g4h87johtf"]
+
+[ext_resource type="Script" uid="uid://dtat6ktytcyys" path="res://Scripts/planet.gd" id="1_xehyc"]
+[ext_resource type="Texture2D" uid="uid://dmt1k51bcyccb" path="res://Assets/CelestialObjects.png" id="2_vpe2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
+atlas = ExtResource("2_vpe2g")
+region = Rect2(0, 0, 64, 64)
+
+[node name="Planet" type="StaticBody2D" unique_id=37863370]
+script = ExtResource("1_xehyc")
+gravity_radius = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1224949603]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=328177957]
+texture = SubResource("AtlasTexture_g4v7s")

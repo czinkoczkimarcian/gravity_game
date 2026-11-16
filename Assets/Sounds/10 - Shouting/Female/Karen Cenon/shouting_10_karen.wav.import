@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk6sll20frsye"
+path="res://.godot/imported/shouting_10_karen.wav-aeb41de9ffac82624eed4a4f92a1eb2d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/10 - Shouting/Female/Karen Cenon/shouting_10_karen.wav"
+dest_files=["res://.godot/imported/shouting_10_karen.wav-aeb41de9ffac82624eed4a4f92a1eb2d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

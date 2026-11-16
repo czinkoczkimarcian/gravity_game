@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgf0yibgh2smo"
+path="res://.godot/imported/shouting_1_sean.wav-3abe0daf6da4a3744f1087f1f0e41934.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/10 - Shouting/Male/Sean Lenhart/shouting_1_sean.wav"
+dest_files=["res://.godot/imported/shouting_1_sean.wav-3abe0daf6da4a3744f1087f1f0e41934.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

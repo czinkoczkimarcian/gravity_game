@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0iyj4qq5uflk"
+path="res://.godot/imported/refusal_9_meghan.wav-5d39a2ed897668d64fc949145acc8fbe.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/5 - Refusal/Female/Meghan Christian/refusal_9_meghan.wav"
+dest_files=["res://.godot/imported/refusal_9_meghan.wav-5d39a2ed897668d64fc949145acc8fbe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

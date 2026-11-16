@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://di26nppo6wtvn"
+path="res://.godot/imported/farewell_9_alex.wav-e616b3f2b368d5fa116d481e7f38024d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/4 - Farewell/Male/Alex Brodie/farewell_9_alex.wav"
+dest_files=["res://.godot/imported/farewell_9_alex.wav-e616b3f2b368d5fa116d481e7f38024d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxgndm2smsx6p"
+path="res://.godot/imported/damage_1_karen.wav-13e9ce77302a2ca9dfcd6060ecd8afff.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/7 - Damage/Female/Karen Cenon/damage_1_karen.wav"
+dest_files=["res://.godot/imported/damage_1_karen.wav-13e9ce77302a2ca9dfcd6060ecd8afff.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

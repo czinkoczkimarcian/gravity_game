@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkcwjwtsv816x"
+path="res://.godot/imported/completion_10_alex.wav-2e889d191b9d4103fa19e28a70a5b5fd.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/1 - Completion/Male/Alex Brodie/completion_10_alex.wav"
+dest_files=["res://.godot/imported/completion_10_alex.wav-2e889d191b9d4103fa19e28a70a5b5fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

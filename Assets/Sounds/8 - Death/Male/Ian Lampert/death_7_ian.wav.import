@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnevmk48eckuf"
+path="res://.godot/imported/death_7_ian.wav-e614bf2fe8d8359eee394f9470017b44.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/8 - Death/Male/Ian Lampert/death_7_ian.wav"
+dest_files=["res://.godot/imported/death_7_ian.wav-e614bf2fe8d8359eee394f9470017b44.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
