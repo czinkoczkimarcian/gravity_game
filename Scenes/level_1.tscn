@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://c7wl24a1xly61" path="res://Assets/Sounds/Week 21 - Freefall WHAT A VIEW.ogg" id="7_wrinw"]
 [ext_resource type="AudioStream" uid="uid://be321ufmwbbx" path="res://Assets/Sounds/crash.mp3" id="8_chwpn"]
 [ext_resource type="AudioStream" uid="uid://54ueb6dp05mf" path="res://Assets/Sounds/win.mp3" id="9_af3po"]
+[ext_resource type="PackedScene" path="res://Scenes/level_complete_ui.tscn" id="10_uicmp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrinw"]
 texture = ExtResource("3_xfk5q")
@@ -70,6 +71,7 @@ sources/0 = SubResource("TileSetAtlasSource_wrinw")
 [node name="Level1" type="Node2D" unique_id=245697842]
 script = ExtResource("1_8ffim")
 next_level = "uid://cteu2ogqu4i8v"
+level_number = 1
 
 [node name="BG" type="Sprite2D" parent="." unique_id=833974054]
 scale = Vector2(1.25, 1.25)
@@ -98,26 +100,9 @@ goal_radius = 64.0
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1272558134]
 
-[node name="LevelCompleteLabel" type="Label" parent="HUD" unique_id=1444686506]
-anchors_preset = -1
-anchor_left = 0.48600003
-anchor_top = 0.776
-anchor_right = 0.526
-anchor_bottom = 0.776
-offset_left = -17.87201
-offset_top = -50.848022
-offset_right = 11.2960205
-offset_bottom = 56.151978
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 40
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+[node name="LevelCompleteUI" parent="HUD" instance=ExtResource("10_uicmp")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2087879180]
-scale = Vector2(1e-05, 1e-05)
 
 [node name="Audio" type="Node" parent="." unique_id=234793485]
 

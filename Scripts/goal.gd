@@ -13,6 +13,8 @@ signal reached(meteorite: AsteroidProjectile)
 var _absorbing: bool = false
 var _absorb_tween: Tween
 
+@onready var complete_sound: AudioStreamPlayer = get_node_or_null("../Audio/Complete") as AudioStreamPlayer
+
 
 func _ready() -> void:
 	# Goal is on collision layer 3 and detects meteorites on layer 2.
@@ -36,8 +38,16 @@ func _on_body_entered(body: Node2D) -> void:
 	if not asteroid.flying or asteroid.dead or asteroid.absorbing:
 		return
 
+	# A reset meteor can produce one stale overlap report when its collision
+	# shape is re-enabled. Ignore reports from well outside the goal.
+	var max_entry_distance := goal_radius + 64.0
+	if asteroid.global_position.distance_squared_to(global_position) > \
+			max_entry_distance * max_entry_distance:
+		return
+
 	_absorbing = true
-	$"../Audio/Complete".play()
+	if complete_sound != null:
+		complete_sound.play()
 
 	# Stop normal flight and make the trail shrink while the meteor is pulled in.
 	asteroid.begin_goal_absorption(absorb_duration)

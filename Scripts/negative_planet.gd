@@ -33,7 +33,7 @@ func acceleration_at(point: Vector2) -> Vector2:
 		return Vector2.ZERO
 
 	# FONTOS: mínusz előjel -> a ponttól elfelé mutató irány.
-	return -offset.normalized() * push_strength
+	return offset * (-push_strength / distance)
 
 
 func _draw() -> void:

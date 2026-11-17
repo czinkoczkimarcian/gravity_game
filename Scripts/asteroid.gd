@@ -65,12 +65,15 @@ var _atlas_source_id: int = -1
 var _active_debris: Array[RigidBody2D] = []
 var _debris_bounce_counts: Dictionary = {}
 var _debris_last_bounce_ms: Dictionary = {}
+var _gravity_sources: Array[Node] = []
 
 
 func _ready() -> void:
 	collision_layer = 2
 	collision_mask = 1
 	_home_position = global_position
+	# The meteor only needs physics while it is actually flying.
+	set_physics_process(false)
 	_create_trail()
 
 	if tilemap == null:
@@ -128,13 +131,22 @@ func launch(initial_velocity: Vector2) -> void:
 	if dead:
 		return
 
+	_refresh_gravity_sources()
 	_kill_fade_tweens()
 	velocity = initial_velocity
 	flying = true
+	set_physics_process(true)
 	trail.modulate.a = 1.0
 	trail.clear_points()
 	_last_committed_pos = global_position
 	trail.add_point(trail.to_local(global_position))
+
+
+func _refresh_gravity_sources() -> void:
+	_gravity_sources.clear()
+	for node in get_tree().get_nodes_in_group("gravity_planets"):
+		if node.has_method("acceleration_at"):
+			_gravity_sources.append(node)
 
 
 ## Called by the goal when the meteor enters its radius. Stops normal
@@ -146,6 +158,7 @@ func begin_goal_absorption(duration: float = 0.45) -> void:
 	absorbing = true
 	flying = false
 	velocity = Vector2.ZERO
+	set_physics_process(false)
 
 	if collision_shape:
 		collision_shape.set_deferred("disabled", true)
@@ -157,15 +170,14 @@ func _physics_process(delta: float) -> void:
 	if not flying or dead or absorbing:
 		return
 
+	var point := global_position
 	var acceleration := Vector2.ZERO
-	var sources := get_tree().get_nodes_in_group("gravity_planets")
 
-	for node in sources:
-		if not node.has_method("acceleration_at"):
-			continue
-		var planet: Variant = node
-		var pull: Vector2 = planet.acceleration_at(global_position)
-		acceleration += pull
+	# The planet list is refreshed on launch, so this loop never queries
+	# the scene tree or checks method names during flight.
+	for planet in _gravity_sources:
+		if is_instance_valid(planet):
+			acceleration += planet.acceleration_at(point)
 
 	velocity += acceleration * delta
 	velocity = velocity.limit_length(maximum_speed)
@@ -196,6 +208,7 @@ func die() -> void:
 	dead = true
 	flying = false
 	velocity = Vector2.ZERO
+	set_physics_process(false)
 
 	# Show the cracked meteor for a moment before it breaks apart.
 	_swap_to_cracked()
@@ -300,6 +313,7 @@ func reset_to(start_position: Vector2) -> void:
 	flying = false
 	dead = false
 	absorbing = false
+	set_physics_process(false)
 	visible = true
 	scale = Vector2.ONE
 	rotation = 0.0
@@ -470,16 +484,15 @@ func _wait_for_wall_bounces() -> void:
 	if required <= 0:
 		return
 
-	var timeout := maxf(debris_bounce_timeout, 0.05)
-	var elapsed := 0.0
+	var timeout_ms := int(maxf(debris_bounce_timeout, 0.05) * 1000.0)
+	var started := Time.get_ticks_msec()
 
-	while elapsed < timeout:
+	while Time.get_ticks_msec() - started < timeout_ms:
 		if _all_debris_bounced(required):
 			if debris_bounce_settle_time > 0.0:
 				await get_tree().create_timer(debris_bounce_settle_time).timeout
 			return
-		await get_tree().create_timer(0.03).timeout
-		elapsed += 0.03
+		await get_tree().physics_frame
 
 
 ## Pulls every piece back to the meteor's home position, tucking them into

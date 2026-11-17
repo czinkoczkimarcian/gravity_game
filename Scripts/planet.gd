@@ -29,8 +29,9 @@ func acceleration_at(point: Vector2) -> Vector2:
 	if distance < 0.001 or distance > gravity_radius:
 		return Vector2.ZERO
 
-	# Constant, clearly visible acceleration inside the circle.
-	return offset.normalized() * 800.0
+	# Constant, clearly visible acceleration inside the circle. Reusing
+	# the distance avoids a second square root from normalized().
+	return offset * (800.0 / distance)
 
 
 
